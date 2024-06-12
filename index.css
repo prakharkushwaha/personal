@@ -5,6 +5,8 @@ body {
     background: #000;
     color: #fff;
     text-align: center;
+   
+    overflow-x: hidden;
 }
 
 .container {
@@ -163,13 +165,16 @@ body {
 /* lovable videoos  */
 
 .lovable-moments-section {
-    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    background: linear-gradient(to right, #d912c8, #ff7eb3);
     padding: 50px 20px;
     text-align: center;
     color: #fff;
 }
 
 .lovable-moments-section h2 {
+    background-color: #ff00b7;
+    border-radius: 10%;
+    padding: 10px;
     font-size: 2.5em;
     margin-bottom: 20px;
 }
@@ -198,7 +203,7 @@ body {
 
 
 .about-her-section {
-    background: linear-gradient(to right, #d8039c, #fcb69f);
+    background: linear-gradient(to right, #03d81f, #fcb69f);
     padding: 50px 20px;
     text-align: center;
     color: #333;
@@ -295,7 +300,10 @@ body {
   box-shadow: 30px 30px 200px rgba(0,0,0,.5);
   animation: animate 1s linear infinite;
 }
-
+.heart img{
+    height:200px ;
+    width:150px ;
+}
 
 .valentine
 {
@@ -341,6 +349,7 @@ body {
 
 .love-list {
     flex: 1;
+    /* align-self: center; */
     max-width: 30%;
 }
 
@@ -358,13 +367,13 @@ body {
 
 .love-list li {
     cursor: pointer;
-    padding: 10px 0;
+    padding: 10px 10px;
     font-size: 1.2em;
     transition: background-color 0.3s;
 }
 
 .love-list li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(6, 64, 239, 0.2);
 }
 
 .love-description {
@@ -470,7 +479,7 @@ body {
     padding: 10px 20px;
     font-size: 1em;
     margin: 5px;
-    background: #ff7eb3;
+    background: #d253d0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -616,9 +625,9 @@ body {
 } */
 
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgb(0, 42, 255);
     padding: 10px 0;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 1000;
     width: 100%;
@@ -633,14 +642,19 @@ nav .menu {
 }
 
 nav .menu li {
+    padding: 10px;
+    
     margin: 0 15px;
 }
 
 nav .menu li a {
+    
+     
     color: white;
     text-decoration: none;
     font-size: 1.2em;
     transition: color 0.3s;
+   
 }
 
 nav .menu li a:hover {
@@ -805,6 +819,75 @@ button:hover {
 
 .audio-controls button:hover {
     background: #fdd835;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .buttons button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+ /* my fav things  */
+ .body-parts-section {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+.body-parts-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.buttons .body-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 5px;
+    background: #02ff24;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.buttons button:hover {
+    background: #fdd835;
+}
+
+.body-part-display {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s;
+}
+
+.body-part-display img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.body-part-display p {
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
 }
 
 @keyframes fadeInDown {

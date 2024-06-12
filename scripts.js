@@ -79,7 +79,7 @@ function showMessage() {
     popup.style.display = 'flex';
     setTimeout(() => {
         popup.style.display = 'none';
-    }, 1000);
+    }, 4000);
 }
 
 
@@ -87,23 +87,23 @@ function showMessage() {
 const gifts = {
     gift1: {
         image: 'images/gift1.jpg',
-        description: 'This is a beautiful gift she gave me for our first anniversary.'
+        description: 'ye sab kuch mujhe tumhre pass hone k ahsas krate hai meri jan ap ho to sab hai rani .'
     },
     gift2: {
         image: 'images/gift2.jpg',
-        description: 'A wonderful surprise gift she gave me on my birthday.'
+        description: 'A wonderful surprise gift she gave me on our first met.'
     },
     gift3: {
         image: 'images/gift3.jpg',
-        description: 'A thoughtful gift she gave me when I got my new job.'
+        description: 'A thoughtful gift she gave me when I met her'
     },
     gift4: {
         image: 'images/gift4.jpg',
-        description: 'This gift was given to me during our second vacation together.'
+        description: 'ye tab mila jb maine purana kho dia tha janeman.'
     },
     gift5: {
         image: 'images/gift5.jpg',
-        description: 'A lovely gift she gave me just because she loves me.'
+        description: 'sbse phla sbse khas ye hai '
     }
 };
 
@@ -129,12 +129,48 @@ function stopSong() {
     song.currentTime = 0; // Reset the song to the beginning
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    playSong(); // Automatically play the song when the page loads
+// document.addEventListener('DOMContentLoaded', function() {
+//     playSong(); // Automatically play the song when the page loads
 
-    var song = document.getElementById('birthdaySong');
-    song.onended = function() {
-        stopSong(); // Stop the song when it ends
-    };
-});
+//     var song = document.getElementById('birthdaySong');
+//     song.onended = function() {
+//         stopSong(); // Stop the song when it ends
+//     };
+// });
+
+// body-parts
+const bodyParts = {
+    eyes: {
+        image: 'images/necktil.jpg',
+        description: 'apka ye til hayee yha pr kiss krna mtlb jannat pa lena aur beta to hoga hi yha chumunga to satve asman pr hogi tum  ye til nhi hai jannat ki chabhi hai yha chumunga aur asar niche hoga gili nichi hogi tum '
+    },
+    smile: {
+        image: 'images/lips.jpg',
+        description: 'apke ye oth itne gulabi itne rasile hai ki bs ek hi chiz k mn krta hai ki bs mil jao to chus lo pura k pura itna pyare hai ki kisssi kissi krlu '
+    },
+    hair: {
+        image: 'images/backtil.jpg',
+        description: 'ye to maine samne se kbhi dekha hi nhi bs intezar hai us din k jb ise mere otho se feel krunga aur tum madhosh ho jaogi '
+    },
+    hands: {
+        image: 'images/anger.jpg',
+        description: 'Hayeee gusse k kya hi khu issse to hm drte hi haiii kuki pyar jo krte hai lekin kbhi kbhi jb gnda gussa krti ho pglpn wo gnda hota hai aisa pyar gussa kro to hm roz jhelege'
+    },
+    laughter: {
+        image: 'images/neck.jpg',
+        description: 'ab n'
+    }
+};
+
+function showBodyPart(partKey) {
+    const part = bodyParts[partKey];
+    const partDisplay = document.getElementById('body-part-display');
+    const partImage = document.getElementById('body-part-image');
+    const partDescription = document.getElementById('body-part-description');
+
+    partImage.src = part.image;
+    partDescription.textContent = part.description;
+    partDisplay.style.display = 'flex';
+}
+
 
